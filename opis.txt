@@ -1,2 +1,4 @@
 Program Flappy podstawy programowania w LibGPX
+
 na podsawie prezentacji YT
+zmiana w pliku: link ...
