@@ -10,6 +10,7 @@ public class DesktopLauncher {
 		config.width = FlappyDemo.WIDTH;
 		config.height = FlappyDemo.HEIGHT;
 		config.title = FlappyDemo.TITLE;
+
 		new LwjglApplication(new FlappyDemo(), config);
 	}
 }
