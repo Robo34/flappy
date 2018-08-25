@@ -1,5 +1,6 @@
 package com.brent.game.states;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.brent.game.FlappyDemo;
@@ -13,16 +14,26 @@ public class MenuState extends State {
         super(gsm);
         background = new Texture("bg.png");
         playBtn = new Texture("playBtn.png");
+
     }
 
     @Override
     public void handleInput() {
+        if(Gdx.input.justTouched()){
+            gsm.set(new PlayState(gsm));
+            dispose();
+        }
+    }
 
+    @Override
+    public void dispose() {
+        background.dispose();
+        playBtn.dispose();
     }
 
     @Override
     public void update(float dt) {
-
+        handleInput();
     }
 
     @Override
